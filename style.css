@@ -13,7 +13,9 @@ body {
 
 .header-area:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  background-color: #3D8EB9;
+  background: #00A885;
+  background: -webkit-linear-gradient(to left, #00A885 , #3D8EB9);
+  background: linear-gradient(to left, #00A885 , #3D8EB9);        
 }
 
 .player-score {
@@ -52,7 +54,9 @@ body {
 
 .num-button:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  background-color: #3D8EB9;
+  background: #00A885;
+  background: -webkit-linear-gradient(to left, #00A885 , #3D8EB9);
+  background: linear-gradient(to left, #00A885 , #3D8EB9); 
 }
 
 .num-button:first-child {
@@ -74,8 +78,9 @@ body {
 }
 
 .numbersMain:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  background-color: #00A885;
+  background: #00A885;
+  background: -webkit-linear-gradient(to left, #00A885 , #3D8EB9);
+  background: linear-gradient(to left, #00A885 , #3D8EB9); 
 }
 
 .operand {
@@ -101,9 +106,10 @@ body {
 }
 
 .totalBtn:hover {
-  background-color: #00A885;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  background-color: #3D8EB9;
+  background: #00A885;
+  background: -webkit-linear-gradient(to left, #00A885 , #3D8EB9);
+  background: linear-gradient(to left, #00A885 , #3D8EB9); 
 }
 
 .clearBtn {
@@ -117,9 +123,10 @@ body {
 }
 
 .clearBtn:hover {
-  background-color: #00A885;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  background-color: #3D8EB9;
+  background: #00A885;
+  background: -webkit-linear-gradient(to left, #00A885 , #3D8EB9);
+  background: linear-gradient(to left, #00A885 , #3D8EB9); 
 }
 
 .guess-message {
