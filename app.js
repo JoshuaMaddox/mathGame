@@ -95,7 +95,7 @@ let MathGame = React.createClass({
     }
     setTimeout(() => {
 
-      this._resetOrClear()
+      this._reset()
         // this.setState({numOne: Math.floor(Math.random() * (1, 15)) + 1});
         // this.setState({numTwo: Math.floor(Math.random() * (1, 15)) + 1});
         // this.setState({playerGuess: ''})
@@ -131,14 +131,17 @@ let MathGame = React.createClass({
 
      return(
       <div className='random-numbers'>
-        <h1>Maths Game</h1>
-        <p>TO WIN, MAKE 'YOUR TOTAL' MATCH THE SUM OF THE NUMBERS IN THE GREEN BOXES. THEN CLICK THE 'SUBMIT TOTAL' BUTTON TO ENTER YOUR GUESS</p>
+        <div className="header-area">
+          <h1>Maths Game</h1>
+          <p>TO WIN, MAKE 'YOUR TOTAL' MATCH THE SUM OF THE NUMBERS IN THE GREEN BOXES. THEN CLICK THE 'SUBMIT TOTAL' BUTTON TO ENTER YOUR GUESS</p>
+        </div>
         <h3>You have: <span className='player-score'>{this.state.playerPoints}</span> points. You need <span className='player-score'>10</span> points to win.</h3>
         <span className='numbersMain'>{this.state.numOne}</span>
         <span className='operand'>+</span>
         <span className='numbersMain'>{this.state.numTwo}</span> 
         {/*display the correct answer*/}
-        <h3 className="user-guess-total">Your Total: <span className='player-score'>{this.state.numberBtn}</span><button className="clearBtn btn btn-sm btn-danger" onClick={this._clear }>Clear Your Total</button></h3>
+        <h3 className="user-guess-total">Your Total: <span className='player-score'>{this.state.numberBtn}</span></h3>
+        <span className="clearBtn" onClick={this._clear}>CLEAR YOUR TOTAL</span>
         <div className="answerField">
           <div className="form-group">
             <p>If You're Happy With Your Total Click Submit to Place Guess</p>
@@ -159,7 +162,7 @@ let MathGame = React.createClass({
               <span className="num-button" data-num={8} onClick={this._myCustomMethod}>8</span>
               <span className="num-button" data-num={9} onClick={this._myCustomMethod}>9</span>
             </div>
-            <button className="totalBtn btn btn-lg btn-block btn-danger" onClick={this._guessMessage}>Submit Your Total</button>
+            <span className="totalBtn" onClick={this._guessMessage}>SUBMIT YOUR TOTAL</span>
         {/*____________________________________________________________________*/}
       </div> 
     )

@@ -2,6 +2,12 @@ body {
   background-color: lightgrey;
 }
 
+.header-area {
+  color: #fff;
+  background-color: red;
+  padding: 5px 40px 20px 40px;
+}
+
 .player-score {
   color: red;
   text-decoration: underline;
@@ -21,6 +27,10 @@ body {
   text-align: center;
 }
 
+.form-group{
+  margin-top: 20px;
+}
+
 .num-button {
   color: #fff;
   min-width: 80px;
@@ -28,6 +38,14 @@ body {
   padding: 5px 15px;
   margin: 5px;
   background-color: red;
+}
+
+.num-button:hover {
+  background-color: darkred;
+}
+
+.num-button:first-child {
+  background-color: grey;
 }
 
 .numbersMain {
@@ -51,5 +69,28 @@ body {
 }
 
 .totalBtn {
-  margin-top: 40px;
+  display: block;
+  margin: 40px auto;
+  color: #fff;
+  font-size: 20px;
+  background-color: red;
+  padding: 5px 20px;
+  width: 600px;
+  margin-top: 50px;
+}
+
+.totalBtn:hover {
+  background-color: darkred;
+}
+
+.clearBtn {
+  color: #fff;
+  background-color: red;
+  font-size: 20px;
+  padding: 5px 20px;
+  margin: 10px auto;
+}
+
+.clearBtn:hover {
+  background-color: darkred;
 }
