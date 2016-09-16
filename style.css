@@ -1,3 +1,46 @@
 body {
   background-color: lightgrey;
 }
+
+.random-numbers {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.num-buttons {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.answerField {
+  text-align: center;
+}
+
+.num-button {
+  color: #fff;
+  min-width: 80px;
+  font-size: 30px;
+  padding: 5px 15px;
+  margin: 5px;
+  background-color: red;
+}
+
+.numbersMain {
+  min-width: 150px;
+  display: inline-block;
+  border-radius: 5%;
+  text-align: center;
+  font-size: 70px;
+  padding: 20px;
+  color: #fff;
+  margin: 20px;
+  padding: none ;
+  background-color: green;
+}
+
+.operand {
+  color: black;
+  text-align: center;
+  font-size: 70px;
+  margin-top: -50px;
+}

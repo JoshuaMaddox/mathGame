@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>React Maths Game</title>
+  <title>React Math Game</title>
   <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script>
   <script src='//cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js'></script>
@@ -13,12 +13,28 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <h1>Is Bootstrap?</h1>
-        <button class="btn btn-success">Test</button>
+      <div id='random-numbers'>
       </div>
-    </div>
-  </div>
+      <div class="answerField">
+        <div class="form-group">
+          <p>Click Numbers to Guess the Answer</p>
+          <input type="text" class="answerInput">
+        </div><!--FORM GROUP-->
+      </div><!--ANSWER FIELD-->
+      <div class='num-buttons'>
+        <span class="num-button">0</span>
+        <span class="num-button">1</span>
+        <span class="num-button">2</span>
+        <span class="num-button">3</span>
+        <span class="num-button">4</span>
+        <span class="num-button">5</span>
+        <span class="num-button">6</span>
+        <span class="num-button">7</span>
+        <span class="num-button">8</span>
+        <span class="num-button">9</span>
+      </div><!--NUM BUTTONS-->
+    </div><!--ROW-->
+  </div><!--CONTAINER-->
 </header>
   
   <div id="root"></div>
