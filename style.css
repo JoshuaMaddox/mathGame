@@ -2,6 +2,11 @@ body {
   background-color: lightgrey;
 }
 
+.player-score {
+  color: red;
+  text-decoration: underline;
+}
+
 .random-numbers {
   text-align: center;
   margin-top: 50px;
@@ -9,7 +14,7 @@ body {
 
 .num-buttons {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 .answerField {
@@ -43,4 +48,8 @@ body {
   text-align: center;
   font-size: 70px;
   margin-top: -50px;
+}
+
+.totalBtn {
+  margin-top: 40px;
 }
