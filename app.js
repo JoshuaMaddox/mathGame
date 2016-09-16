@@ -28,6 +28,7 @@ let MathGame = React.createClass({
       playerGuess: '',
       numberBtn: 0,
       guessMessage: '',
+      guessMessageClass: '',
       playerPoints: 0
     }
 
@@ -50,16 +51,8 @@ let MathGame = React.createClass({
   //Before we render do this first
   componentDidMount(){
     this.randomNumGenerator()
-    console.log('I am this 4: ' + this.state.numOne)
-
-
-    //-------------------
-
-    
   },
 
-
-  // ============================================================================
   //Resets the game and is called in the _guessMessage function
   _reset: function() {
     // this.state.numberBtn
@@ -67,7 +60,7 @@ let MathGame = React.createClass({
     this.setState({numTwo: Math.floor(Math.random() * (1, 15)) + 1});
     this.setState({playerGuess: ''})
     this.setState({numberBtn: 0})
-    this.setState({guessMessage: ''})
+    this.setState({guessMessage: 'Want to guess again?'})
   },
 
   //Show Incorrect guess message
@@ -91,17 +84,11 @@ let MathGame = React.createClass({
       this.setState({playerPoints: this.state.playerPoints += 1})
       this.setState({playerGuess: 'Congrats, you get a point for guess the correct answer!'}) 
     } else {
-      console.log('Sorry, you guessed incorrectly. Try again.')
+      this.setState({guessMessage: 'Sorry, you guessed incorrectly. The correct answer was ' +  ' ' + (this.state.numOne + this.state.numTwo)})
     }
     setTimeout(() => {
-
       this._reset()
-        // this.setState({numOne: Math.floor(Math.random() * (1, 15)) + 1});
-        // this.setState({numTwo: Math.floor(Math.random() * (1, 15)) + 1});
-        // this.setState({playerGuess: ''})
-        // this.setState({numberBtn: 0})
-        // this.setState({guessMessage: ''})
-      }, 2000);
+    }, 3000);
   },
 
  
@@ -129,45 +116,41 @@ let MathGame = React.createClass({
     // let numOne = this.state.numOne ? this.state.numOne : this.randomNumGenerator()
     // let numTwo = this.state.numTwo ? this.state.numTwo : this.randomNumGenerator()
 
-     return(
+     return (
       <div className='random-numbers'>
         <div className="header-area">
-          <h1>Maths Game</h1>
+          <h1>ADDITION GUESSING GAME</h1>
           <p>TO WIN, MAKE 'YOUR TOTAL' MATCH THE SUM OF THE NUMBERS IN THE GREEN BOXES. THEN CLICK THE 'SUBMIT TOTAL' BUTTON TO ENTER YOUR GUESS</p>
         </div>
         <h3>You have: <span className='player-score'>{this.state.playerPoints}</span> points. You need <span className='player-score'>10</span> points to win.</h3>
         <span className='numbersMain'>{this.state.numOne}</span>
         <span className='operand'>+</span>
         <span className='numbersMain'>{this.state.numTwo}</span> 
-        {/*display the correct answer*/}
+        <h3 className={this.state.guessMessageClass}>{this.state.guessMessage}</h3>
         <h3 className="user-guess-total">Your Total: <span className='player-score'>{this.state.numberBtn}</span></h3>
         <span className="clearBtn" onClick={this._clear}>CLEAR YOUR TOTAL</span>
         <div className="answerField">
           <div className="form-group">
             <p>If You're Happy With Your Total Click Submit to Place Guess</p>
             <p>Click on the numbers below to add the number you click to your total</p>
-            {/*<input className='answerField'type="text"/>*/}
           </div>
         </div>
-        {/*____________________________________________________________________*/}
-            <div className='num-buttons'>
-              <span className="num-button" data-num={0} onClick={this._myCustomMethod}>0</span>
-              <span className="num-button" data-num={1} onClick={this._myCustomMethod}>1</span>
-              <span className="num-button" data-num={2} onClick={this._myCustomMethod}>2</span>
-              <span className="num-button" data-num={3} onClick={this._myCustomMethod}>3</span>
-              <span className="num-button" data-num={4} onClick={this._myCustomMethod}>4</span>
-              <span className="num-button" data-num={5} onClick={this._myCustomMethod}>5</span>
-              <span className="num-button" data-num={6} onClick={this._myCustomMethod}>6</span>
-              <span className="num-button" data-num={7} onClick={this._myCustomMethod}>7</span>
-              <span className="num-button" data-num={8} onClick={this._myCustomMethod}>8</span>
-              <span className="num-button" data-num={9} onClick={this._myCustomMethod}>9</span>
-            </div>
-            <span className="totalBtn" onClick={this._guessMessage}>SUBMIT YOUR TOTAL</span>
-        {/*____________________________________________________________________*/}
+        <div className='num-buttons'>
+          <span className="num-button" data-num={0} onClick={this._myCustomMethod}>0</span>
+          <span className="num-button" data-num={1} onClick={this._myCustomMethod}>1</span>
+          <span className="num-button" data-num={2} onClick={this._myCustomMethod}>2</span>
+          <span className="num-button" data-num={3} onClick={this._myCustomMethod}>3</span>
+          <span className="num-button" data-num={4} onClick={this._myCustomMethod}>4</span>
+          <span className="num-button" data-num={5} onClick={this._myCustomMethod}>5</span>
+          <span className="num-button" data-num={6} onClick={this._myCustomMethod}>6</span>
+          <span className="num-button" data-num={7} onClick={this._myCustomMethod}>7</span>
+          <span className="num-button" data-num={8} onClick={this._myCustomMethod}>8</span>
+          <span className="num-button" data-num={9} onClick={this._myCustomMethod}>9</span>
+        </div>
+        <span className="totalBtn" onClick={this._guessMessage}>SUBMIT YOUR TOTAL</span>
       </div> 
     )
   }
-
 });
 
 ReactDOM.render(
